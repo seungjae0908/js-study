@@ -22,20 +22,24 @@
         입력: 7, 3 -> "3부터 7까지의 누적합계: 25")
         - while문을 if else 로 나눠서 두번 쓰는 것은 지양하겠습니다.
        */
-        11
+        
         var x = +prompt('첫번째 숫자를 입력하세요'); //begin
         var y = +prompt('두번째 숫자를 입력하세요');
 
-        var total = 0; //누적합을 기억해 줄 변수
-        while (x <= y) {
-            total += x // 
-            x++; // step
-        if (x >= y) {
-            total += y 
-            y++; // step
+        if(x>y) {
+            var temp = y;
+            y = x;
+            x = temp;
         }
-    }
-        console.log(`누적합: ${total}`);
+        var n = x;
+      
+        var total = 0; //누적합을 기억해 줄 변수
+        while (x <= y) {  
+            total += x; // 
+            x++; // step
+        }
+    
+        console.log(`${n}부터 ${y}까지 누적합: ${total}`);
     </script>
 </body>
 
